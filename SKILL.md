@@ -4,6 +4,8 @@ description: |
   大师.skill — 输入「我做的细分行业」，自动完成行业大佬调研 / 工具地图 / 工作流 / 知识正典 / 信息源 / 术语标准 六轨深度调研，提炼为可运行的「行业 Master OS」skill。
   生成的 {industry}.master skill 是自包含目录，所有 hermit agent / Claude Code agent / OpenClaw / Codex 都能安装，让 AI 立刻进入「这行的资深人」模式。
   触发词：「造大师」「做个 X 的 master skill」「我是 X 行业」「让 agent 变成 X 大师」「update 大师 X」「大师 X」「我做 X，帮我蒸一个」。
+github_url: https://github.com/voidborne-d/master-skill
+github_hash: 5ebc9eb491d6ddc21ce0b39c647c584f7ab72459
 allowed-tools: Read, Write, Edit, Bash, WebSearch, WebFetch
 ---
 
