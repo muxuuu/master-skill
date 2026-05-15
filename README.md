@@ -44,6 +44,12 @@
 
 ---
 
+> 🆕 &nbsp;**2026.05.10 第 12 个行业 — iOS 应用上架** — 第一个**平台 specific + 政策 12 月强制 deadline + 双合规体系** 的行业蒸出来。Apple 审核是黑盒（业内估拒绝率 20-40%），蒸的是**降低拒绝率 + 快速恢复**而不是「保过审」承诺。海外 Apple 单家 vs 国内 4 件套（ICP + 算法备案 + 游戏版号 + 8-10 应用市场）双合规体系不可一刀切。本轮**不蒸人物 sub-skill**（用户指示，验证 skip flag）。
+>
+> 🆕 &nbsp;**2026.05.09 第 11 个行业 — 用 AI agent 赚钱** — 蒸新兴商业行业（量大但 signal-to-noise 极差，90% 是 hype）。5 派互相挑衅（B2B SaaS / Indie hacker / 服务咨询 / VC观察 / 国内）对同问题给完全相反答案，蒸馏保留分歧不平均。3 个跨派人物 sub-skill：**Bret Taylor**（Sierra B2B）+ **Pieter Levels**（Indie 极致代表）+ **Hamel Husain**（咨询 + evals）。
+>
+> 🆕 &nbsp;**2026.05.08 第 10 个行业 — 八字命理 / 玄学算命** — 第一个**半敏感 + 学派分歧大**的行业蒸出来。同盘子平派 / 盲派 / 五术派 / 新派 给不同结论，skill 不强行调和；治安管理处罚法 2026-01-01 新版的商业合规边界写进决策规则。3 个人物 sub-skill 跨派覆盖（段建业盲派 / 倪海厦五术 / 梁湘润子平学科化）。
+>
 > 🔥 &nbsp;**2026.05.05 大升级 v1.4** — 以前 agent 说「我用了 86% 一手来源」全靠自己打分，现在每条来源自动跑 URL 验真、16 道质量检验、黑名单（知乎 / 公众号 / G2 等）强拦截，**蒸不出垃圾**。同时多了第 9 个完整行业 — **保险经纪人 / 代理人**。
 >
 > 📢 &nbsp;**2026.05.02 发布** — 生成的 skill 不只能对话，还自带一套 bash 命令工具帮你执行。[Release notes →](https://github.com/voidborne-d/master-skill/releases/tag/v1.1)
@@ -309,20 +315,31 @@ python3 tools/update_skill.py finalize --skill-dir <skill>
 | ✅ **恋爱高手** | 软技能 | 中文 | [love-coach-master/](prototypes/love-coach-master/) |
 | ✅ **足踝外科** | 医疗（强监管） | 中文 | [foot-ankle-surgery-master/](prototypes/foot-ankle-surgery-master/) |
 | ✅ **法律执业**（中国法） | 法律（强监管） | 中文 | [china-law-master/](prototypes/china-law-master/) |
-| 🆕 **保险经纪人 / 代理人** | 金融（强监管） | 中文 | [insurance-broker-cn-master/](prototypes/insurance-broker-cn-master/) |
+| ✅ **保险经纪人 / 代理人** | 金融（强监管） | 中文 | [insurance-broker-cn-master/](prototypes/insurance-broker-cn-master/) |
+| ✅ **八字命理 / 玄学算命** | 传统文化（半敏感） | 中文 | [bazi-metaphysics-master/](prototypes/bazi-metaphysics-master/) |
+| ✅ **用 AI agent 赚钱** | 新兴商业 | 全球 | [monetize-agents-master/](prototypes/monetize-agents-master/) |
+| 🆕 **iOS 应用上架** | 平台 specific（政策高变化） | 全球 + 中文 | [ios-app-launch-master/](prototypes/ios-app-launch-master/) |
 
-9 个行业横切技术 / 商业 / 内容运营 / 软技能 / 医疗 / 法律 / 金融 — 大师.skill 框架对各类行业都跑得通。
+12 个行业横切技术 / 商业 / 内容运营 / 软技能 / 医疗 / 法律 / 金融 / 传统文化 / 新兴商业 / 平台 specific — 大师.skill 框架对各类行业都跑得通，包括「学派多互相挑衅」的新兴商业、「政策 12 月强制 deadline」的平台 specific。
 
-**最新行业「保险经纪人」的产物里有什么**：
+**最新行业「iOS 应用上架」的产物里有什么**：
 
-- 73 条来源，91.8% 是一手，0 条黑名单
-- 5 个核心心智模型（每个都有 ≥ 2 个独立来源背书）
-- 8 条决策规则（全部能在原始研究笔记里追溯）
-- 3 个人物 sub-skill（**叶云燕** 平安系销售传奇 + **江立辉** 明亚独立经纪派 + **谷主吕志远** 高净值打假流派 — 三人观点互相 challenge，不是平均融合）
-- 12 段真行业对话样本（面客 / 同业 / 监管 / 反例 4 类 register）
-- 7 个一键跑的 bash 脚本（客户经营 5 步 / 保单体检 / 健康告知 + 投保 / 利率切换决策 / 理赔陪跑 / 续期管理 / 同业合规边界）
+- 169 条来源，70.4% 是一手，0 条黑名单
+- 6 个核心心智模型（**Apple 审核是黑盒** / **双合规体系不可一刀切**（海外 vs 大陆） / **政策时效衰减极快** / **ASO 数据驱动 vs Indie audience-first** / **30% Apple Tax 是事实** / **拒绝是日常**）
+- 10 条决策规则（含一条专门处理国内 4 件套备案：ICP + 算法备案 + 游戏版号 + 8-10 应用市场各自审核）
+- 12 段真行业对话样本（同业 / 用户教育 / 反 Apple / 反例 4 类 register × 6 学派覆盖）
+- 5 个一键跑的 bash 决策脚本（拒审救火 / ASO 选择 / 多区策略 / 商业模型 / 国内合规）
+- 完整的「6 派对照矩阵」（Apple 官方 / 海外 Indie / 大厂 release engineering / ASO 优化派 / 反 Apple 反垄断 / 国内合规派）
 
-对应一份 PASS 评级的质检报告（16 项 14 满分 1 部分 0 失败）。
+**用户指示**：iOS 上架本轮**不蒸馏人物 sub-skill**（节省 1 cron 周期），仍保留人物地图调研（16 figures）作为行业认知一部分。验证大师 skill 的 `skip_sub_skills` flag 工作正常 — 总产出仍完整。
+
+对应全部 4 项质检 PASS：
+- mechanical rubric 16 项 13 满分 + 1 部分 + 0 失败
+- 每条结论原文可追溯（claim verifier 16/0/0）
+- 来源台账 0 违规
+- 跨 prototype 回归 0 issue（12 个 prototype 全过）
+
+**特别说明**：iOS 上架是 Apple 黑盒审核行业（拒绝率 20-40% 业内估计）。任何「保证过审 / 代过审」服务都是骗子。这个 skill 蒸的是**降低拒绝率 + 快速恢复**的认知框架 + 学派对照 + 决策规则，不是「保过审」承诺。诚实边界 6 条写死，含「不蒸 fraudulent 玩法」（fake review / TestFlight 公链当上架 / 国内版号灰产 / 30% Tax 抗议而不接受）。
 
 调研过程**完全透明**。每个样本都附完整的六路调研笔记 + 蒸馏文档，可以追溯每条心智模型、每条决策规则是从哪几个来源出来的。
 
@@ -435,6 +452,8 @@ master-skill/
 | v1.2 | 决策树主题自动学 + 定时刷新 + 5 个行业样本（含小红书 / SEO / 恋爱） | ✅ |
 | v1.3 | 短视频投流 / 足踝外科 / 法律 = 8 个行业横切覆盖 | ✅ |
 | v1.4 | **质量护栏 + 第 9 个行业** — 自动跑 16 道质检 + URL 验真 + 黑名单强拦截 + 冷僻行业兜底（自动从协会 / 监管 / 招聘 / 课程多源补充）+ 新增**保险经纪人 / 代理人** | ✅ |
+| v1.5 | **第 10 个行业 — 八字命理 / 玄学算命** — 第一个半敏感 + 学派分歧大行业；同盘多派给不同结论保留分歧不平均；source_verifier 加 4 个古籍 archive 主源（ctext / guoxuedashi / wikisource / archive.org，命理 + 中医 + 历史 canon 永久受益） | ✅ |
+| v1.6 | **第 11+12 个行业 — 用 AI agent 赚钱 + iOS 应用上架** — 新兴商业（量大水分高，5 派互相挑衅）+ 平台 specific（政策 12 月强制 deadline + 双合规体系）。验证 `skip_sub_skills` flag（iOS 上架按用户指示跳人物蒸馏，节省 1 cron 周期）；iOS 上架 6 派对照（Apple 官方 / Indie / 大厂 release eng / ASO / 反 Apple / 国内合规）写完整 | ✅ |
 | v2.x | PyPI 打包 / GitHub Action 自动更新 / 多语言文档 / 工具 marketplace | 🔲 |
 
 详见 [ROADMAP.md](ROADMAP.md)。

@@ -44,7 +44,13 @@ Drop into any AI agent — from that moment on,<br>
 
 ---
 
-> 🔥 &nbsp;**2026.05.05 — v1.4 quality upgrade** — before, when an agent claimed "86% of my sources are first-hand," it was self-grading on the honor system. Now every URL is auto-classified, every skill must clear 16 quality checks, and known content farms (Zhihu / WeChat blogs / G2 / Capterra etc.) are hard-blocked at intake. **You can't distill garbage anymore.** Plus a new 9th end-to-end industry — **insurance brokers / agents (China)**.
+> 🆕 &nbsp;**2026.05.10 — 12th industry: iOS App Store launch** — the first **platform-specific + dual-compliance + 12-month-mandatory-deadline** industry. Apple App Review is a black box (industry estimate 20-40% rejection rate), so this skill distills **how to reduce rejection rate + recover fast** instead of "guaranteed approval." Overseas Apple-only review vs mainland China's 4-step (ICP + Algorithm + Game-license + 8-10 domestic marketplaces) is non-fungible. **Skips person sub-skills** per user direction (validates the skip_sub_skills flag).
+>
+> 🆕 &nbsp;**2026.05.09 — 11th industry: Monetizing AI agents** — distilled the emerging commercial niche (high volume but terrible signal-to-noise; 90% is hype). 5 schools openly contradict each other (B2B SaaS / Indie hacker / Consulting / VC observer / China) — distillation preserves disagreement, doesn't average. 3 cross-school person sub-skills: **Bret Taylor** (Sierra B2B) + **Pieter Levels** (Indie extreme) + **Hamel Husain** (Consulting + evals).
+>
+> 🆕 &nbsp;**2026.05.08 — 10th industry: Bazi metaphysics / Chinese fortune-telling** — the first **semi-sensitive + school-divergent** industry distilled. Five schools (子平派 Ziping / 盲派 Mangpai / 五术派 Wushu / 新派 Newschool / 学院派 Academic) give different readings of the same chart, and the skill **preserves disagreement instead of averaging**. The 2026-01-01 amendment to China's Public Security Administration Punishment Law (Article 27, business-side compliance) is baked into the decision rules. 3 cross-school person sub-skills shipped: **段建业** (mainland Mangpai) + **倪海厦** (Hong Kong/Taiwan five-arts) + **梁湘润** (子平 academic-track).
+>
+> 🔥 &nbsp;**2026.05.05 — v1.4 quality upgrade** — before, when an agent claimed "86% of my sources are first-hand," it was self-grading on the honor system. Now every URL is auto-classified, every skill must clear 16 quality checks, and known content farms (Zhihu / WeChat blogs / G2 / Capterra etc.) are hard-blocked at intake. **You can't distill garbage anymore.** Plus a 9th end-to-end industry — **insurance brokers / agents (China)**.
 >
 > 📢 &nbsp;**2026.05.02 release** — generated skills don't just talk; they ship with a bash command suite. [Release notes →](https://github.com/voidborne-d/master-skill/releases/tag/v1.1)
 >
@@ -313,20 +319,31 @@ Every one is end-to-end runnable, with full research data + generated SKILL.md +
 | ✅ **Love coach** | Soft skills | Chinese | [love-coach-master/](prototypes/love-coach-master/) |
 | ✅ **Foot-and-ankle surgery** | Medical (regulated) | Chinese | [foot-ankle-surgery-master/](prototypes/foot-ankle-surgery-master/) |
 | ✅ **Chinese law practice** | Legal (regulated) | Chinese | [china-law-master/](prototypes/china-law-master/) |
-| 🆕 **Insurance broker / agent** | Finance (regulated) | Chinese | [insurance-broker-cn-master/](prototypes/insurance-broker-cn-master/) |
+| ✅ **Insurance broker / agent** | Finance (regulated) | Chinese | [insurance-broker-cn-master/](prototypes/insurance-broker-cn-master/) |
+| ✅ **Bazi metaphysics / fortune-telling** | Traditional culture (semi-sensitive) | Chinese | [bazi-metaphysics-master/](prototypes/bazi-metaphysics-master/) |
+| ✅ **Monetizing AI agents** | Emerging commercial | Global | [monetize-agents-master/](prototypes/monetize-agents-master/) |
+| 🆕 **iOS App Store launch** | Platform-specific (high policy churn) | Global + Chinese | [ios-app-launch-master/](prototypes/ios-app-launch-master/) |
 
-9 industries cross-cutting technical / commercial / content ops / soft skills / medical / legal / finance — master-skill works across all of them.
+12 industries cross-cutting technical / commercial / content ops / soft skills / medical / legal / finance / traditional culture / emerging commercial / platform-specific — master-skill handles even cases where five schools openly disagree (emerging commercial) or where 12-month policy deadlines are enforced (platform-specific).
 
-**What's inside the latest "insurance broker" deliverable**:
+**What's inside the latest "iOS App Store launch" deliverable**:
 
-- 73 sources, 91.8% first-hand, 0 blacklisted
-- 5 core mental models (every one backed by ≥ 2 independent sources)
-- 8 decision rules (every one traceable back to the original research notes)
-- 3 person sub-skills (**Ye Yunyan** Ping An's sales legend + **Jiang Lihui** the Mingya independent-broker school + **Guzhu Lu Zhiyuan** the high-net-worth fraud-buster — three perspectives that challenge each other, not averaged)
-- 12 real-industry dialogue samples (across 4 registers: client-facing / peer / regulator / counter-example)
-- 7 ready-to-run bash scripts (5-step client cultivation / policy review / health disclosure + underwriting / interest-rate-switch decision / claims walkthrough / renewal management / peer-compliance boundaries)
+- 169 sources, 70.4% first-hand, 0 blacklisted
+- 6 core mental models (**Apple App Review is a black box** / **Dual compliance is non-fungible** (overseas vs mainland China) / **Policy decay is fast** / **ASO data-driven vs Indie audience-first** / **30% Apple Tax is a fact** / **Rejection is daily**)
+- 10 decision rules, including a dedicated path for the China 4-step compliance: ICP filing + Algorithm filing + Game license number + 8-10 domestic Android marketplaces' separate review
+- 12 real-industry dialogue samples (4 registers: peer / user-education / anti-Apple / counter-example × 6 schools covered)
+- 5 ready-to-run bash decision scripts (rejection handling / ASO choice / region strategy / monetization model / China compliance)
+- A complete **6-school comparison matrix** (Apple official / Overseas Indie / Big-co release engineering / ASO optimization / Anti-Apple antitrust / China compliance)
 
-Plus a PASS-rated quality report (16 items → 14 perfect + 1 partial + 0 fails).
+**User directive**: this iOS deliverable **skips person sub-skill distillation** (saves 1 cron cycle), while keeping the 16-figure landscape research as part of the industry's cognitive map. This validates master-skill's `skip_sub_skills` flag — the deliverable is still complete (research + synthesis + SKILL.md + cli + full QC suite).
+
+All four QC checks PASS:
+- mechanical rubric: 13 perfect + 1 partial + 0 fail (16 items)
+- claim verifier: 16 supported / 0 weak / 0 unsupported
+- source manifest: 0 violation
+- cross-prototype regression: 0 issue across all 12 skills
+
+**Sensitivity note**: iOS App Store launch is a black-box review industry (industry estimate 20-40% rejection rate). Any "guarantee approval / proxy submission" service is a scam. What this skill distills is **the cognitive framework for reducing rejection rate + recovering quickly + multi-region compliance** — not "guaranteed approval" promises. Six honest-boundary clauses include "no fraudulent shortcuts" (no fake reviews / no using TestFlight public links as a release / no Chinese license-number gray market / no protesting the 30% tax instead of accepting it).
 
 The research process is **fully transparent** — every prototype includes complete six-track research notes + the synthesis document, every mental model and decision rule traceable to its sources.
 
@@ -439,6 +456,8 @@ master-skill/
 | v1.2 | Auto-clustered decision-tree topics + scheduled refresh + 5 industry samples (incl. Xiaohongshu / SEO / love coach) | ✅ |
 | v1.3 | Short-video paid ads / foot-and-ankle surgery / law = 8 industries cross-cutting coverage | ✅ |
 | v1.4 | **Quality guardrails + 9th industry** — auto-run 16 quality checks + URL verification + blacklist hard-block + cold-niche fallback (auto-pull from associations / regulators / job descs / course syllabi) + new **insurance broker / agent** sample | ✅ |
+| v1.5 | **10th industry — Bazi metaphysics / fortune-telling** — first semi-sensitive + school-divergent industry; preserves disagreement instead of averaging when 5 schools give different readings; source_verifier extended with 4 zh-CN classical archives (ctext / guoxuedashi / wikisource / archive.org), benefiting all metaphysics + TCM + history canon work going forward | ✅ |
+| v1.6 | **11th + 12th industries — Monetizing AI agents + iOS App Store launch** — emerging commercial (high volume but terrible signal-to-noise, 5 schools openly contradicting) + platform-specific (12-month mandatory deadlines + dual compliance overseas vs mainland China). Validates `skip_sub_skills` flag (iOS launch skips person distillation per user, saves 1 cron cycle); iOS launch ships a 6-school comparison matrix (Apple / Indie / Big-co release engineering / ASO / Anti-Apple / China compliance) | ✅ |
 | v2.x | PyPI packaging / GitHub Action auto-update / multi-language docs / tool marketplace | 🔲 |
 
 See [ROADMAP.md](ROADMAP.md).

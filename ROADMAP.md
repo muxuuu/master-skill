@@ -86,6 +86,79 @@
 
 8 个 prototype 横切覆盖技术 / 商业 / 内容运营 / 软技能 / 医疗 / 法律。
 
+## v1.4 — 质量工程升级 + 第 9 个行业 ✅ (2026-05-05)
+
+iter 24-26 集中 14 项 Q1-Q6 改造, 把 "agent 自报一手率" 替换为机械验证.
+
+- [x] Source Manifest convention (T01-S001 全局 source_id + URL 5 桶分类)
+- [x] 16 项 quality_check rubric (含 URL 验真 / 黑名单 / 一致性 / claim 反查)
+- [x] source_verifier (zh-CN + en 黑白名单 / blacklist hard-block)
+- [x] source_manifest 一致性 gate (declared > auto without surrogate note → violation)
+- [x] claim_verifier (反查 SKILL.md 每条结论是否在原文有支撑)
+- [x] cold_detector --stage wave1|full (行业冷僻自动兜底)
+- [x] 8 个 collectors (github / arxiv / RSS / podcast + 4 surrogate: regulator / association / JD / syllabus)
+- [x] 4 个 ingest 工具 (PDF / EPUB / PPTX → JSONL chunks)
+- [x] transcribe 升级 (faster-whisper + pyannote diarize + transcript_scorer + extract_mentions)
+- [x] skill_writer atomic write + bounded backup prune
+- [x] 4 轮 codex 独立审计每轮 fix
+- [x] 第 9 个行业 prototype: insurance-broker-cn-master (73 sources / 91.8% 一手 / 0 黑名单 / 16 项 14 满分 1 部分 0 失败 PASS)
+- [x] README 重写 — 删除中英混杂 + 开发术语, "蒸不出垃圾" banner
+
+## v1.5 — 第 10 个行业 + 学派分歧蒸馏 ✅ (2026-05-08)
+
+第一个半敏感 + 学派分歧大行业蒸出来, 验证大师.skill 框架对"同盘多派给不同结论"行业的处理能力.
+
+- [x] bazi-metaphysics-master prototype (八字命理 + 玄学算命)
+  - 6 轨调研 1183 行, 125 manifest URLs, 72.8% 一手, 0 黑名单
+  - synthesis 379 行, 6 心智模型 + 10 决策规则 + 12 对话样本 (4 register) + 5 流派矩阵
+  - SKILL.md 426 行 + cli/ (1 protocol + 4 decision)
+  - 3 sub-skills 跨派对位 (段建业盲派 530 / 倪海厦五术 463 / 梁湘润子平学科化 373)
+  - 4 项质检全部 PASS (rubric / claim / manifest / self_test)
+- [x] 学派分歧保留, 不平均化 — 子平 / 盲派 / 五术 / 新派 / 学院派 5 派 6 维度对照矩阵
+- [x] 大陆法律语境 — 治安管理处罚法 27 条 2026-01-01 新版 W8 商业合规决策树
+- [x] source_verifier 加 4 个 zh-CN 古籍 archive 主源 (ctext.org / guoxuedashi.net / zh.wikisource.org / archive.org) — 永久工具改进, 命理 + 中医 + 历史 canon 通用
+- [x] README_en.md 同步至 v1.4 / v1.5
+- [x] /tmp/normalize_headers.py + /tmp/fix_manifest.py 临时 helper (cold_detector 期望 ### 头 / manifest bucket auto-fix)
+
+## v1.6 — 第 11 + 12 个行业, skip_sub_skills flag 验证 ✅ (2026-05-09 → 05-10)
+
+跨两个新行业, 验证 master-skill 框架对"量大水分高 + 学派多互相挑衅" 和 "platform-specific + 政策 12 月强制 deadline" 的处理.
+
+- [x] 第 11 个行业: monetize-agents (用 AI agent 赚钱) — 2026-05-09
+  - 6 轨调研 1337 行 / 154 manifest URLs / 61% 一手 / 0 黑名单
+  - synthesis 442 行 (我手写, 因 spawn agent stalled 600s — 第二次手写经验)
+  - 5 派对照 (B2B SaaS / Indie / 咨询 / VC / 国内) 互相挑衅 → 蒸馏不平均化
+  - 3 跨派人物 sub-skill 1274 行: Bret Taylor + Pieter Levels + Hamel Husain
+  - 4 项质检 PASS (quality 12/2/0/1, claim 16/0/0, manifest 0 violation, self_test 0 issues)
+
+- [x] 第 12 个行业: ios-app-launch (iOS 应用上架) — 2026-05-10
+  - 6 轨调研 1227 行 / 169 manifest URLs / 70.4% 一手 / 0 黑名单
+  - synthesis 465 行 (我手写, 第三次手写, 模式确立)
+  - 6 派对照 (Apple 官方 / Indie / 大厂 release eng / ASO / 反 Apple / 国内合规)
+  - 双合规体系 (海外 Apple 单家 vs 国内 4 件套 ICP+算法备案+游戏版号+8-10 应用市场)
+  - 政策强制 deadlines: Privacy Manifest 2024-05-01 / Anti-steering 2024-01 / DMA 2024-03-07 / iOS 26 SDK 2026-04-28 / Age Rating 5 档 2026-01-31
+  - **跳人物 sub-skill** (用户指示, 验证 skip_sub_skills flag): 节省 1 cron 周期, 总产出仍完整
+  - 4 项质检 PASS (quality 13/1/0/1, claim 16/0/0, manifest 0 violation, self_test 0 issues, 12 prototype + tools 全过)
+
+### 12 个行业横切覆盖 (v1.6 后)
+
+| # | 行业 | 类别 | 语言 | 学派多样性 |
+|---|------|------|------|-----------|
+| 1 | LLM agent infra | 技术 | 英文 | 中 |
+| 2 | 跨境电商运营 | 商业 | 中文 | 中 |
+| 3 | 小红书运营 | 内容运营 | 中文 | 低 |
+| 4 | 短视频投流 | 商业 + 算法 | 中文 | 低 |
+| 5 | SEO 专家 | 半技术 | 中文 | 低 |
+| 6 | 恋爱高手 | 软技能 | 中文 | 高 (Gottman / EFT / Esther Perel) |
+| 7 | 足踝外科 | 医疗强监管 | 中文 | 中 |
+| 8 | 中国法律执业 | 法律强监管 | 中文 | 中 (民法 / 刑法 / 普法) |
+| 9 | 保险经纪人 | 金融强监管 | 中文 | 中 (平安系 / 明亚 / 测评派) |
+| 10 | 八字命理 / 玄学算命 | 传统文化半敏感 | 中文 | **高 (5 派同盘不同结论)** |
+| 11 | 用 AI agent 赚钱 | 新兴商业 | 全球 | **高 (5 派互相挑衅)** |
+| 12 | iOS 应用上架 | 平台 specific 政策高变化 | 全球 + 中文 | **高 (6 派对照矩阵)** |
+
+后 3 个 (10/11/12) 都是"学派分歧 = 行业特征"的 high-divergence 行业, 验证 master-skill 框架对 high-divergence 行业的健壮性.
+
 ## v1.x — 计划中
 
 - [ ] Phase 1 子 agent 主动用 brave-search / agent-reach
